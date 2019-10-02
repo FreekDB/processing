@@ -14,7 +14,7 @@ Overview of the slides in the presentation that are linked to exercises:
 - slide 29: exercise 4 => a hole bunch of shapes
 - slide 31: exercise 5 => background, stroke and fill color
 - slide 33: exercise 6 => random colors and lines
-- slide 35: exercise 7 => pdf with random colors and lines
+- slide 35: exercise 7 => PDF with random colors and lines
 
 The code in this repository is open source and licensed under the Apache
 License 2.0, except for the parts that were written by others and were used as the basis of some of the programs.

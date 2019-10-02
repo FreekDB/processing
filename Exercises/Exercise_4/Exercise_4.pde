@@ -63,7 +63,7 @@ rect(340, 360, 100, 40, 12);
 
 // New shape: arc! An arc is part of an ellipse.
 strokeWeight(1);
-// x, y, width, height, start angle, stop angle (angles 0..2 * PI)
+// x, y, width, height, start angle, stop angle (angles: 0..2 * PI)
 arc(100, 500, 100, 100, 0, 2 * PI);
 arc(100, 500, 80, 100, 0, 2 * PI);
 arc(100, 500, 60, 100, 0, 2 * PI);

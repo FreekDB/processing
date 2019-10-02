@@ -1,3 +1,8 @@
+// Generative Art Workshop: https://www.meetup.com/en-AU/Delft-Developers-Designers/events/261482407/
+// October 2019, Tim van den Bosch and Freek de Bruijn
+// Exercise 1: println, size, background and ellipse.
+
+
 // Write a message to the console area.
 println("Hello, Delft Developers & Designers!");
 

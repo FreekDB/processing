@@ -35,6 +35,7 @@ void draw() {
 
   // Pick a random number of lines to draw (from 10 up to 1,000).
   int lineCount = int(random(10, 1000));
+  println("The algorithm has decided to draw " + lineCount + " lines.");
 
   // Repeat the following block for each line we want to draw (lineCount times).
   for (int lineIndex = 0; lineIndex < lineCount; lineIndex++) {

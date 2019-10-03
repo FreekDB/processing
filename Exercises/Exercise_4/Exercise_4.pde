@@ -1,6 +1,6 @@
 // Generative Art Workshop: https://www.meetup.com/en-AU/Delft-Developers-Designers/events/261482407/
 // October 2019, Tim van den Bosch and Freek de Bruijn
-// Exercise 4: a hole bunch of shapes.
+// Exercise 4: a whole bunch of shapes.
 
 
 // Set the size of our artwork (width, height in pixels).

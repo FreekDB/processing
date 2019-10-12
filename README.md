@@ -18,3 +18,6 @@ Overview of the slides in the presentation that are linked to exercises:
 
 The code in this repository is open source and licensed under the Apache
 License 2.0, except for the parts that were written by others and were used as the basis of some of the programs.
+
+
+![Rectangular Transparency image 01](Images/RectangularTransparency-01.png?raw=true "Rectangular Transparency 01")

@@ -1,7 +1,9 @@
 // Original by Antonio Belluscio: https://www.openprocessing.org/sketch/193632
-// Slightly modified by Freek de Bruijn
+// Slightly modified by Freek de Bruijn.
 // Demonstrates the use of the pixels array (with loadPixels and updatePixels), the modulo operator and frameCount.
 
+
+boolean drawFast = true;
 
 void setup() {
   size(720, 720);
@@ -18,14 +20,9 @@ void draw() {
   updatePixels();
 }
 
-
-
-
-boolean fast = true;
-
 void mouseReleased() {
-  fast = !fast;
-  frameRate(fast ? 60 : 1);
+  drawFast = !drawFast;
+  frameRate(drawFast ? 60 : 1);
 
   frameCount = 0;
   redraw();

@@ -15,7 +15,6 @@ line(10, 50, 40, 10);
 ![Screenshot exercise 1](../Images/Exercise_01.png?raw=true "Screenshot exercise 1")
 
 
-***
 ## Exercise 2: println, size, background and ellipse
 
 ```java

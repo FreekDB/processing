@@ -26,13 +26,17 @@ private static final List<String> EXERCISE_DESCRIPTIONS = Arrays.asList(
 private String baseDirectory;
 private BufferedWriter markdownWriter;
 
-private int penX = 400;
-private int penY = 300;
+private int penX;
+private int penY;
+private float maximumDistance;
 
 // Setup with one-time initialization. (This function is called by Processing when it starts the program.)
 void setup() {
     // Set the size of our artwork (width, height in pixels).
     size(800, 600);
+    penX = width / 2;
+    penY = height / 2;
+    maximumDistance = (width + height) / 2.0;
 
     // Prevent the draw function below to be called continuously. For this program, the draw function will be called
     // once at the end of the setup.
@@ -161,17 +165,18 @@ private void writeLine(String line) throws IOException {
 // Graphics inspired by https://makezine.com/projects/draw-abstract-art-random-number-generator/
 private void movePen(String line) {
     for (int characterIndex = 0; characterIndex < line.length(); characterIndex++) {
-        double direction = (2 * PI / 64.0) * (line.charAt(characterIndex) % 64);
+        // Move the pen in a direction that's based on the characters in the line.
+        float direction = (2 * PI / 64.0) * (line.charAt(characterIndex) % 64);
         int moveX = (int) (Math.cos(direction) * 28) + 10;
         int moveY = (int) (Math.sin(direction) * 28) + 16;
         int newPenX = Math.min(Math.max(penX + moveX, 0), width - 1);
         int newPenY = Math.min(Math.max(penY + moveY, 0), height - 1);
 
+        // The pen color depends on the distance to the screen center: darker closerto the center.
         int distanceX = newPenX - (width / 2);
         int distanceY = newPenY - (height / 2);
-        int distance = distanceX * distanceX + distanceY * distanceY;
-        float maximumDistance = (width * width / 4.0) + (height * height / 4.0);
-        color penColor = color(int(255 * (sqrt(distance) / sqrt(maximumDistance))));
+        float distance = sqrt(distanceX * distanceX + distanceY * distanceY);
+        color penColor = color(int(255 * (distance / maximumDistance)));
 
         stroke(penColor);
         line(penX, penY, newPenX, newPenY);

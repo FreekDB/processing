@@ -2,7 +2,7 @@
 // Author: Freek de Bruijn.
 // Languages: Processing + Kotlin (a very promising partnership).
 // Date: October 3rd, 2019 (in Java) and January 21st, 2020 (in Kotlin).
-// Link: todo: put this file in GitHub repository and add new link here.
+// Link: http://bit.ly/StCBFtB
 
 import freek.processingkotlin.ProcessingSketch
 import kotlin.random.Random
